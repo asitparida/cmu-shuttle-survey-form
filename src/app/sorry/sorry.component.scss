@@ -1,0 +1,118 @@
+:host {
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 0 15px;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: x-large;
+    text-align: center;
+}
+.bus-icon {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 0 0;
+    img {
+    }
+    label {
+        margin: 10px 0;
+        font-size: medium;
+    }
+}
+label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: medium;
+    text-align: center;
+    span {
+        color: #A90000;
+    }
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #D0D0D0;
+    padding: 15px;
+    margin: 20px 0 20px 0;
+    outline: none;
+    background: rgba(0,0,0,0.05);
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: #909090;
+        color: #000;
+    }
+}
+button {
+    background: transparent;
+    border: 1px solid transparent;
+    line-height: 48px;
+    height: 48px;
+    padding: 0 15px;
+    font-size: small;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+    min-width: 100px;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.33);
+}
+
+.problems-wrapper {
+    margin-bottom: 20px;
+    .problem-item {
+        width: 50%;
+        float: left;
+        padding: 5px;
+        .problem-item-wrapper {
+            background: rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-flow: row;
+            padding: 15px 0;
+            box-shadow: 0px 0px 2px rgba(0,0,0,0.33);
+            border: 2px solid transparent;
+            &.active {
+                border: 2px solid #000;
+            }
+        }
+        .problem-img {
+            width: 60px;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 28px;
+            }
+        }
+        label {
+            font-size: small;
+            margin:0;
+            text-align: left;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            background: rgba(0,0,0,0.10);
+            color: #000;
+        }
+    }
+}
+.clearfix:after {
+    content:'';
+    display: table;
+    clear: both;
+}

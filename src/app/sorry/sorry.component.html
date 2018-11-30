@@ -1,0 +1,15 @@
+<h1>We're sorry that your experience was not better.</h1>
+<label>Please select any issues you encountered:</label>
+<div class="problems-wrapper">
+  <div class="problem-item" *ngFor="let item of problems" >
+    <div class="problem-item-wrapper" (click)="setProblem(item.key)" [class.active]="problem === item.key">
+        <div class="problem-img">
+            <img [attr.src]="item.icon" /> 
+          </div>
+          <label>{{item.label}}</label>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<textarea placeholder="If you want updates on your issue, please include your CMU email." [(ngModel)]="comments"></textarea>
+<button class="submit" (click)="submit()">Submit</button>

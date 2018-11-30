@@ -1,0 +1,13 @@
+<h1>We value your feedback!</h1>
+<div class="bus-icon">
+  <img src="assets/bus.png" />
+  <label>Shuttle/Escort</label>
+</div>
+<label>How was your <span>ride</span> experience ?</label>
+<div class="rating">
+  <div class="rating-item" *ngFor="let item of ratings; let i = index;" (click)="markRating(i + 1)">
+    <img src="assets/star_filled.png" *ngIf=" i < rating" />
+    <img src="assets/star.png" *ngIf="i >= rating" />
+  </div>
+</div>
+<button class="submit" [disabled]="rating === 0" (click)="rate()">Submit</button>
